@@ -1,0 +1,28 @@
+// В этом файле должны быть стили для БЭМ-блока header-services, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header-services {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__menu {
+    list-style: none;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 11px 0;
+
+    li {
+      margin-left: 30px;
+    }
+
+    a {
+      font-size: 13px;
+      font-weight: 400;
+      color: #000;
+    }
+  }
+
+}

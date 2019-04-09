@@ -1,0 +1,43 @@
+// В этом файле должны быть стили для БЭМ-блока main-header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.main-header {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 25px 0;
+  display: flex;
+
+  &__logo {
+    margin-right: 42px;
+    flex-shrink: 0;
+  }
+
+  &__category {
+    margin-right: 20px;
+    z-index: 20;
+
+    .dropdown__toggler {
+      display: inline-block;
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: $line-height;
+      text-decoration: none;
+      text-transform: none;
+      color: #272522;
+      border-radius: 2px;
+      background-color: #ededed;
+    }
+  }
+
+  &__search {
+    flex-grow: 1;
+    margin-right: 20px;
+  }
+
+  &__btn {
+    flex-shrink: 0;
+  }
+}
